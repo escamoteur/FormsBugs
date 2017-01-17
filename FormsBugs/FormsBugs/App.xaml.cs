@@ -13,7 +13,14 @@ namespace FormsBugs
         {
             InitializeComponent();
 
-            MainPage = new FormsBugs.MainPage();
+            var tabbedPage = new FormsBugs.MainPage();
+
+            tabbedPage.Children.Add(new Page1());
+            tabbedPage.Children.Add(new Page2());
+            tabbedPage.Children.Add(new Page3());
+
+
+            MainPage = tabbedPage;
         }
 
         protected override void OnStart()
